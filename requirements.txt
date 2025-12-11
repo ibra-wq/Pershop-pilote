@@ -1,0 +1,6 @@
+fastapi
+groq
+python-dotenv
+email-validator
+streamlit
+
