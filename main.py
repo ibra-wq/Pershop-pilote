@@ -7,7 +7,7 @@ from typing import List, Dict, Tuple
 import streamlit as st
 from groq import Groq
 from dotenv import load_dotenv
-
+from shoppers_data import SHOPPERS
 # ============================================================
 # 0. CONFIG GLOBALE + CSS CUSTOM
 # ============================================================
@@ -184,31 +184,6 @@ GROQ_ENABLED = groq_client is not None
 
 ASSIGNMENTS_PATH = "assignments.jsonl"
 
-
-# ============================================================
-# 1. BASE DE DONNÉES DES PERSONAL SHOPPERS
-# ============================================================
-
-SHOPPERS: List[Dict] = [
-    # ... même contenu que précédemment, je ne le raccourcis que pour la lisibilité
-    # Garde exactement les 20 profils que nous avons déjà définis
-    {
-        "id": 1,
-        "nom": "InAndStyle Paris",
-        "genre_clients": ["femme"],
-        "specialites": ["working_girl", "relooking pro", "accompagnement magasin"],
-        "styles": ["chic", "élégant", "minimal"],
-        "zone": "Paris",
-        "formats": ["magasin", "visio"],
-        "niveau_budget": ["moyen", "élevé"],
-        "tags": ["#working_girl", "#costumes", "#capsule_wardrobe"],
-        "note_moyenne": 4.8,
-    },
-    # ... recolle ici tous les autres shoppers 2 à 20 inchangés ...
-]
-
-# (Pour gagner de la place dans ce message, je ne répète pas les 20, 
-# mais dans ton fichier tu dois garder la liste complète que tu avais.)
 
 
 # ============================================================
